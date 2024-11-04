@@ -1,19 +1,10 @@
-## Foundry
+## Simple ERC2O contract on Linea with Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+### Install OpenZeppelin Contracts
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
+```shell
+forge install openzeppelin/openzeppelin-contracts@v5.1.0 --no-commit
+```
 
 ### Build
 
@@ -21,46 +12,8 @@ https://book.getfoundry.sh/
 $ forge build
 ```
 
-### Test
+### Deploy on Linea
 
 ```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+$ fforge script script/DeployRadToken.s.sol:DeployRadToken --rpc-url https://linea-sepolia.infura.io/v3/<API-KEY> --private-key <your_MetaMask_private_key> --broadcast
 ```
