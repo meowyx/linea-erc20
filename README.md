@@ -17,3 +17,9 @@ $ forge build
 ```shell
 $ forge script script/DeployRadToken.s.sol:DeployRadToken --rpc-url https://linea-sepolia.infura.io/v3/<API-KEY> --private-key <your_MetaMask_private_key> --broadcast
 ```
+
+# Using .env
+
+```
+forge script script/DeployRadToken.s.sol:DeployRadToken --rpc-url linea-sepolia --private-key $PRIVATE_KEY --broadcast
+```
